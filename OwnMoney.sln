@@ -7,9 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9590978E-73A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E0C2C8B9-9A8E-4D8A-A41C-6130DF3A5BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnMoney.Ui", "src\OwnMoney.Ui\OwnMoney.Ui.csproj", "{70C9E5B0-6CD4-4326-9D1D-C6BDF5300411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwnMoney.Ui", "src\OwnMoney.Ui\OwnMoney.Ui.csproj", "{70C9E5B0-6CD4-4326-9D1D-C6BDF5300411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnMoney.Orchestrator", "src\OwnMoney.Orchestrator\OwnMoney.Orchestrator.csproj", "{8B36490E-F235-468E-930B-D1A3B18A76B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwnMoney.Orchestrator", "src\OwnMoney.Orchestrator\OwnMoney.Orchestrator.csproj", "{8B36490E-F235-468E-930B-D1A3B18A76B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnMoney.Shared", "src\OwnMoney.Shared\OwnMoney.Shared.csproj", "{F87950B5-8BC5-4B74-8802-A59916C9E869}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8B36490E-F235-468E-930B-D1A3B18A76B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B36490E-F235-468E-930B-D1A3B18A76B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B36490E-F235-468E-930B-D1A3B18A76B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87950B5-8BC5-4B74-8802-A59916C9E869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87950B5-8BC5-4B74-8802-A59916C9E869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87950B5-8BC5-4B74-8802-A59916C9E869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87950B5-8BC5-4B74-8802-A59916C9E869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{70C9E5B0-6CD4-4326-9D1D-C6BDF5300411} = {9590978E-73A3-4699-ABCC-EAC6E17EC90A}
 		{8B36490E-F235-468E-930B-D1A3B18A76B7} = {9590978E-73A3-4699-ABCC-EAC6E17EC90A}
+		{F87950B5-8BC5-4B74-8802-A59916C9E869} = {9590978E-73A3-4699-ABCC-EAC6E17EC90A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78623C8A-8B18-472D-AED0-F38D42BD5E3B}

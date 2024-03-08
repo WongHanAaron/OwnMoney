@@ -4,12 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:OwnMoney.Ui"
+    xmlns:dashboard="clr-namespace:OwnMoney.Ui.Views.Dashboard"
     Shell.FlyoutBehavior="Disabled"
     Title="OwnMoney.Ui">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        Route="MainPage" />-->
+    <ShellContent 
+        Title="Dashboard"
+        ContentTemplate="{DataTemplate dashboard:DashboardPage}"
+        Route="Dashboard"/>
 </Shell>
