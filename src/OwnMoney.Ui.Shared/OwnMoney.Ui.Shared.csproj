@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc.Maui" Version="8.1.273-pre" />
+    <PackageReference Include="Prism.Maui" Version="8.1.273-pre" />
+    <PackageReference Include="Prism.Maui.Rx" Version="8.1.273-pre" />
+  </ItemGroup>
+
+</Project>

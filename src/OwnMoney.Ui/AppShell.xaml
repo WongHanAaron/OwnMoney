@@ -7,13 +7,4 @@
     xmlns:dashboard="clr-namespace:OwnMoney.Ui.Views.Dashboard"
     Shell.FlyoutBehavior="Disabled"
     Title="OwnMoney.Ui">
-
-    <!--<ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />-->
-    <ShellContent 
-        Title="Dashboard"
-        ContentTemplate="{DataTemplate dashboard:DashboardPage}"
-        Route="Dashboard"/>
 </Shell>

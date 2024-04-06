@@ -71,6 +71,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\OwnMoney.Ui.Shared\OwnMoney.Ui.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\Dashboard\DashboardLandscapeView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

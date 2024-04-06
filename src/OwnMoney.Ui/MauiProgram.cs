@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using OwnMoney.Ui.Services;
+using OwnMoney.Ui.Services.Environment;
 using OwnMoney.Ui.Views.Dashboard;
 using Prism;
+using Prism.DryIoc;
 
 namespace OwnMoney.Ui
 {
@@ -18,8 +21,14 @@ namespace OwnMoney.Ui
                 })
                 .RegisterTypes(containerRegistry =>
                 {
+
                     containerRegistry.RegisterGlobalNavigationObserver();
                     containerRegistry.RegisterForNavigation<DashboardPage>();
+
+                    var collection = new ServiceCollection();
+                    collection.AddOwnMoneyUi();
+                    var provider = collection.BuildServiceProvider();
+                    containerRegistry.Register<IServiceProvider>(() => provider);
                     //containerRegistry.RegisterForNavigation<RootPage>();
                     //containerRegistry.RegisterForNavigation<SamplePage>();
                     //containerRegistry.RegisterForNavigation<SplashPage>();
@@ -37,7 +46,6 @@ namespace OwnMoney.Ui
                     if (status == "Failed" && !string.IsNullOrEmpty(x.Result?.Exception?.Message))
                         Console.Error.WriteLine(x.Result.Exception.Message);
                 }))
-
                 .OnAppStart(navigationService => navigationService.CreateBuilder()
                     .AddSegment<DashboardViewModel>()
                     .Navigate(HandleNavigationError))
@@ -48,6 +56,7 @@ namespace OwnMoney.Ui
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
+            
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

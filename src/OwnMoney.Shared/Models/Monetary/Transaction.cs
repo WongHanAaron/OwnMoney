@@ -4,14 +4,10 @@ using System.Text;
 
 namespace OwnMoney.Shared.Models.Monetary
 {
-    public class Transaction
+    public class Transaction : Entry
     {
-        public int Id { get; set; }
-        public int SourceId { get; set; }
-        public int SourceObjectId { get; set; }
+        ///<summary> The category assigned to this transaction </summary>
         public int CategoryId { get; set; }
-        public string Description { get; set; }
-        public DateTimeOffset DateTime { get; set; }
-        public float Amount { get; set; }
+        public TransactionType Type { get; set; }
     }
 }
