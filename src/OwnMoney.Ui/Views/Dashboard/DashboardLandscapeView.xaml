@@ -4,6 +4,8 @@
              xmlns:dxc="clr-namespace:DevExpress.Maui.Charts;assembly=DevExpress.Maui.Charts"
              x:Class="OwnMoney.Ui.Views.Dashboard.DashboardLandscapeView">
     <VerticalStackLayout>
-        
+        <Label Text="Dashboard Landscape"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
     </VerticalStackLayout>
 </ContentView>

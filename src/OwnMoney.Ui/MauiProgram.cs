@@ -1,7 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DevExpress.Maui;
+using Microsoft.Extensions.Logging;
 using OwnMoney.Ui.Services;
 using OwnMoney.Ui.Services.Environment;
 using OwnMoney.Ui.Views.Dashboard;
+using OwnMoney.Ui.Views.Transactions;
 using Prism;
 using Prism.DryIoc;
 
@@ -13,6 +15,7 @@ namespace OwnMoney.Ui
         {
             var builder = MauiApp.CreateBuilder()
             .UseMauiApp<App>()
+            .UseDevExpress()
             .UsePrism(prism =>
                 prism.ConfigureModuleCatalog(moduleCatalog =>
                 {
@@ -21,14 +24,11 @@ namespace OwnMoney.Ui
                 })
                 .RegisterTypes(containerRegistry =>
                 {
+                    containerRegistry.AddOwnMoneyViews();
 
-                    containerRegistry.RegisterGlobalNavigationObserver();
-                    containerRegistry.RegisterForNavigation<DashboardPage>();
-
-                    var collection = new ServiceCollection();
+                    var collection = new ContainerRegistryAdapter(containerRegistry);
                     collection.AddOwnMoneyUi();
-                    var provider = collection.BuildServiceProvider();
-                    containerRegistry.Register<IServiceProvider>(() => provider);
+
                     //containerRegistry.RegisterForNavigation<RootPage>();
                     //containerRegistry.RegisterForNavigation<SamplePage>();
                     //containerRegistry.RegisterForNavigation<SplashPage>();
@@ -47,7 +47,7 @@ namespace OwnMoney.Ui
                         Console.Error.WriteLine(x.Result.Exception.Message);
                 }))
                 .OnAppStart(navigationService => navigationService.CreateBuilder()
-                    .AddSegment<DashboardViewModel>()
+                    .AddSegment<TransactionsViewModel>()
                     .Navigate(HandleNavigationError))
             )
             .ConfigureFonts(fonts =>
