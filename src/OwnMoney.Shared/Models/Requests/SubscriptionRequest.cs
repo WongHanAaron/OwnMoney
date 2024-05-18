@@ -8,7 +8,7 @@ namespace OwnMoney.Shared.Models.Requests
     public class SubscriptionRequest
     {
         ///<summary> The unique ID for this request </summary>
-        public Guid RequestId { get; protected set; } = Guid.NewGuid();
+        public Guid Id { get; protected set; } = Guid.NewGuid();
 
         ///<summary> The query performed and to subscribe to changes to </summary>
         public GetEntriesQuery Query { get; set; }

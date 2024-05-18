@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
-namespace OwnMoney.Shared.Usecases.Import
+namespace OwnMoney.Shared.Components.Import
 {
     ///<summary> Responsible for importing an exported account details from  </summary>
     public interface IChaseImporter
