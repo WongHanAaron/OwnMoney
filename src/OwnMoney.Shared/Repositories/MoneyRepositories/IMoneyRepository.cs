@@ -1,5 +1,5 @@
 ﻿using OwnMoney.Shared.Models.Monetary;
-using OwnMoney.Shared.Models.Queries;
+using OwnMoney.Shared.Models.Requests;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,5 +11,8 @@ namespace OwnMoney.Shared.Repositories.MoneyRepositories
     {
         IEnumerable<Entry> GetEntries(GetEntriesQuery query);
         void InsertEntries(IEnumerable<Entry> entries);
+        void SubscribeToChanges(SubscriptionRequest request);
+        void UnsubscribeFromChanges(Guid requestId);
+
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OwnMoney.Shared.Models.Queries
+namespace OwnMoney.Shared.Models.Requests
 {
     public class GetEntriesQuery
     {

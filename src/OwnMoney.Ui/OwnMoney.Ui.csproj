@@ -57,22 +57,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DevExpress.Blazor.Server.WebAssembly" Version="24.1.1-alpha-24085" />
-		<PackageReference Include="DevExpress.Maui.Charts" Version="24.1.1-alpha-24085" />
-		<PackageReference Include="DevExpress.Maui.Controls" Version="24.1.1-alpha-24085" />
-		<PackageReference Include="DevExpress.Maui.Core" Version="24.1.1-alpha-24085" />
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.1-alpha-24085" />
+	  <AndroidResource Remove="Views\Login\**" />
+	  <Compile Remove="Views\Login\**" />
+	  <EmbeddedResource Remove="Views\Login\**" />
+	  <MauiCss Remove="Views\Login\**" />
+	  <MauiXaml Remove="Views\Login\**" />
+	  <None Remove="Views\Login\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Prism.DryIoc.Maui" Version="8.1.273-pre" />
 		<PackageReference Include="Prism.Maui" Version="8.1.273-pre" />
 		<PackageReference Include="Prism.Maui.Rx" Version="8.1.273-pre" />
+		<PackageReference Include="Syncfusion.Licensing" Version="25.2.4" />
+		<PackageReference Include="Syncfusion.Maui.DataGrid" Version="25.2.4" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Views\Login\" />
-	</ItemGroup>
-
-	<ItemGroup>
+	  <ProjectReference Include="..\OwnMoney.Shared\OwnMoney.Shared.csproj" />
 	  <ProjectReference Include="..\OwnMoney.Ui.Shared\OwnMoney.Ui.Shared.csproj" />
 	</ItemGroup>
 

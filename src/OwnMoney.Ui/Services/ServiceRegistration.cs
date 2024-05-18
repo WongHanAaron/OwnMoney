@@ -23,6 +23,7 @@ namespace OwnMoney.Ui.Services
         public static void AddOwnMoneyUi(this IServiceCollection collection)
         {
             collection.AddSingleton<IWindowSizeListener, WindowSizeListener>();
+            collection.AddSingleton<IFilePicker>(FilePicker.Default);
         }
     }
 

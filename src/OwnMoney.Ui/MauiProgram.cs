@@ -1,11 +1,11 @@
-﻿using DevExpress.Maui;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using OwnMoney.Ui.Services;
 using OwnMoney.Ui.Services.Environment;
 using OwnMoney.Ui.Views.Dashboard;
 using OwnMoney.Ui.Views.Transactions;
 using Prism;
 using Prism.DryIoc;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace OwnMoney.Ui
 {
@@ -14,8 +14,8 @@ namespace OwnMoney.Ui
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder()
+            .ConfigureSyncfusionCore()
             .UseMauiApp<App>()
-            .UseDevExpress()
             .UsePrism(prism =>
                 prism.ConfigureModuleCatalog(moduleCatalog =>
                 {
